@@ -1,0 +1,27 @@
+### sources file and paths 
+sources          = /public/home/acapp7905d/li_chao/specfem3d-bixie1/Pyadjoint/Tools4SEM3D_MultiSever/files/SOURCES_SELECTED_INTERATION1
+obs_path         = /public/home/acapp7905d/li_chao/specfem3d-bixie1/Pyadjoint/CFs
+syn_path         = /public/home/acapp7905d/li_chao/specfem3d-bixie1/Pyadjoint/runbase
+base_path        = /public/home/acapp7905d/li_chao/specfem3d-bixie1/Pyadjoint/XSH_solver
+window_file      = /public/home/acapp7905d/li_chao/specfem3d-bixie1/Pyadjoint/Tools4SEM3D_MultiSever/files/Window.txt
+
+adjsrc_type      = cc_traveltime
+
+NPROC            = 4
+
+### parameters for taper
+taper_percentage = 1.0
+taper_type       = cos_p10
+measure_type     = dt
+
+### parameters for the data selection
+half_duration    = 0.4 
+noi_len          = 30
+snr              = 5
+tshift           = 0.4
+
+### parameters for the estimation of error with uncorrelation assumption
+dt_sigma_min     = 0.0001
+dlna_sigma_min   = 0
+
+draw_flag        = True

@@ -1,0 +1,23 @@
+#!/bin/bash
+
+#SBATCH -J test
+#SBATCH -n 1 
+#SBATCH -N 1 
+#SBATCH -p kshdnormal
+#SBATCH -o work.lst
+#SBATCH -e err.lst
+
+#SBATCH --gres=dcu:1
+
+module purge
+module load compiler/devtoolset/7.3.1
+module load mpi/hpcx/2.7.4/gcc-7.3.1
+module load  compiler/rocm/3.9.1
+module load apps/anaconda3/5.2.0
+
+export UCX_TLS=rc_x,shm
+
+#python 1_Construct_Runbase.py 
+python 2_AdjointSource.py >> Output
+#python 3_Pre4Adj_Simulation.py
+
